@@ -12,8 +12,29 @@ h1 {
 }
 
 .grid-container {
-    /* Insert grid properties here!*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "path oppo"
+        "curi pers";
+    gap: 15px;
     padding: 20px;
+}
+
+.grid-item:nth-child(1) {
+    grid-area: path;
+}
+
+.grid-item:nth-child(2) {
+    grid-area: oppo;
+}
+
+.grid-item:nth-child(3) {
+    grid-area: curi;
+}
+
+.grid-item:nth-child(4) {
+    grid-area: pers;
 }
 
 .grid-item {
